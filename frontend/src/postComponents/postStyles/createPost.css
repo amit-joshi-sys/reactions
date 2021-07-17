@@ -1,0 +1,123 @@
+.create-post-container {
+  width: 70%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fafafa;
+  border-radius: 7px;
+  margin-bottom: 2rem;
+  margin-top: 1.6rem;
+  -webkit-box-shadow: 0px 6px 8px -3px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 6px 8px -3px rgba(0, 0, 0, 0.75);
+}
+.post-body {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.poster-photo {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  margin: 1rem;
+  object-fit: cover;
+}
+.post-body textarea {
+  width: 80%;
+  height: 6rem;
+  border-radius: 7px;
+  padding: 0.4rem;
+  margin-top: 0.4rem;
+}
+.post-image-upload {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0.8rem;
+  margin-top: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+.custom-file-upload {
+  width: 30%;
+  height: 2rem;
+  padding-top: 0.5rem;
+  border-radius: 7px;
+  background-color: #fafafa;
+  color: #263238;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  transition: all 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.custom-file-upload:hover {
+  background-color: #eeeeee;
+}
+.fa-image {
+  margin-right: 0.5rem;
+}
+.post-image-upload input {
+  display: none;
+}
+.create-post-button {
+  width: 35%;
+  height: 1.9rem;
+  margin-bottom: 1rem;
+  background-color: #42a5f5;
+  color: #263238;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 0;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.create-post-button:hover {
+  background-color: #1976d2;
+}
+.create-post-button:disabled {
+  background-color: #e0e0e0;
+}
+.create-post-photo {
+  width: 30%;
+  height: 30%;
+  border-radius: 5px;
+  object-fit: cover;
+}
+@media screen and (max-width: 500px) {
+  .poster-photo {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    margin-right: 0.6rem;
+  }
+  .post-body {
+    justify-content: flex-start;
+  }
+  .post-body textarea {
+    width: 70%;
+    height: 2.5rem;
+    margin-right: 0.4rem;
+  }
+  .post-image-upload {
+    padding: 0.4rem;
+    margin-top: 0;
+    margin-bottom: 0.6rem;
+  }
+  .create-post-button {
+    width: 60%;
+  }
+  .custom-file-upload {
+    width: 43%;
+  }
+}

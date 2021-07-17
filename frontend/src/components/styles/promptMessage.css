@@ -1,0 +1,57 @@
+.prompt-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.prompt-message {
+  width: 60%;
+  height: 100%;
+  padding: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #fafafa;
+  font-weight: 900;
+  margin-top: 0.9rem;
+  border-radius: 7px;
+  -webkit-box-shadow: 0px 6px 8px -3px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 6px 8px -3px rgba(0, 0, 0, 0.75);
+}
+
+.buttons {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 0.8rem;
+}
+.prompt-button {
+  width: 30%;
+  height: 1.5rem;
+  background-color: #eeeeee;
+  border-radius: 7px;
+  border: 0;
+  font-weight: 700;
+  transition: all 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  -webkit-box-shadow: 0px 6px 8px -3px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 6px 8px -3px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+}
+.affirmative:hover {
+  background-color: #b0bec5;
+}
+
+@media screen and (max-width: 500px) {
+  .prompt-message {
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.8rem;
+  }
+  .prompt-button {
+    font-size: 0.7rem;
+  }
+}

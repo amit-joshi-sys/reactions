@@ -1,0 +1,17 @@
+.follow-button {
+  width: 50%;
+  height: 60%;
+  background-color: #eeeeee;
+  border: 0;
+  border-radius: 7px;
+  margin-right: 0.8rem;
+  margin-top: 5.3rem;
+  cursor: pointer;
+  color: #263238;
+  font-weight: 900;
+  font-size: 1.1rem;
+  transition: all 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.follow-button:hover {
+  background-color: #bdbdbd;
+}

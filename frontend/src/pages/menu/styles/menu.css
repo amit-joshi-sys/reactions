@@ -1,0 +1,100 @@
+.menu-bar {
+  display: flex;
+  justify-content: space-between;
+  height: 13%;
+  align-items: center;
+  list-style: none;
+  width: 100%;
+  background-color: #1565c0;
+  padding: 1rem;
+}
+
+.left {
+  display: flex;
+  justify-content: flex-start;
+  width: 60%;
+  align-items: center;
+}
+
+.title {
+  color: #eceff1;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.right {
+  display: flex;
+  justify-content: space-evenly;
+  width: 40%;
+  align-items: center;
+}
+
+.menu-item {
+  color: #eceff1;
+  font-weight: 900;
+  cursor: pointer;
+  text-decoration: none;
+}
+.user-photo {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: #e0e0e0;
+  font-weight: 900;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+.menu-user-photo {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.background {
+  width: 40px;
+  display: flex;
+  height: 40px;
+  background-color: #78909c;
+  border-radius: 50px;
+  align-items: center;
+  justify-content: center;
+}
+.signout-btn {
+  width: 37%;
+  height: 2rem;
+  background-color: #42a5f5;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #eceff1;
+  font-weight: 900;
+  transition: all 250ms cubic-bezier(0.19, 1, 0.22, 1);
+  font-size: 1rem;
+  padding: 0.2rem;
+}
+.signout-btn:hover {
+  background-color: #1e88e5;
+}
+@media screen and (max-width: 500px) {
+  .menu-bar {
+    height: 10%;
+  }
+  .title {
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+
+  .menu-item {
+    font-size: 0.9rem;
+  }
+  .signout-btn {
+    width: 30%;
+    height: fit-content;
+    font-size: 0.5rem;
+  }
+  .background {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}

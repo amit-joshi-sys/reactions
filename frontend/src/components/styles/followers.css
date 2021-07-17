@@ -1,0 +1,111 @@
+.follower-container {
+  width: 100%;
+  height: 100%;
+  background-color: #eceff1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.follower-content {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #eeeeee;
+  margin-top: 1.4rem;
+  margin-bottom: 0.5rem;
+  border-radius: 6px;
+  -webkit-box-shadow: 0px 6px 8px -3px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 6px 8px -3px rgba(0, 0, 0, 0.75);
+}
+.follower-card {
+  width: 80%;
+  height: auto;
+  display: flex;
+  margin-top: 1rem;
+  border-radius: 10px;
+  justify-content: space-evenly;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: #fafafa;
+  -webkit-box-shadow: 0px 6px 8px -3px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 6px 8px -3px rgba(0, 0, 0, 0.75);
+}
+
+.follower-image {
+  width: 30%;
+  height: 8%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.user-content {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 1rem;
+  align-items: center;
+}
+
+.follower-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+  margin-bottom: 2rem;
+}
+
+.profile-link-container {
+  width: 100%;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-link {
+  text-align: center;
+  width: 50%;
+  height: 2rem;
+  padding-top: 0.4rem;
+  text-decoration: none;
+  background-color: #eceff1;
+  border-radius: 7px;
+  color: #212121;
+  font-weight: 900;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  transition: all 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.profile-link:hover {
+  background-color: #cfd8dc;
+}
+
+.no-message {
+  width: 100%;
+  padding: 1rem;
+  background-color: #eeeeee;
+  border-radius: 7px;
+  text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+  .follower-content {
+    width: 80%;
+  }
+  .follower-card {
+    flex-direction: column;
+    height: 100%;
+    padding: 0.7rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .follower-image {
+    width: 100%;
+    height: 20%;
+  }
+}

@@ -1,0 +1,113 @@
+.users-container {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  background-color: #eceff1;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  overflow-x: hidden;
+  padding: 0.7rem;
+}
+.users-content {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 6px;
+  background-color: #fafafa;
+  -webkit-box-shadow: 0px 6px 8px -3px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 6px 8px -3px rgba(0, 0, 0, 0.75);
+  overflow-x: hidden;
+}
+.heading {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  padding: 0.8rem;
+}
+.users-card-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: relative;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow-x: auto;
+  padding: 0.7rem;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+}
+.users-card-container::-webkit-scrollbar {
+  width: 0;
+  display: none;
+}
+.users-card {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.6rem;
+  margin-right: 0.4rem;
+  margin-top: 0.6rem;
+  padding: 0.7rem;
+  border-radius: 7px;
+  -webkit-box-shadow: 0px 6px 8px -3px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 6px 8px -3px rgba(0, 0, 0, 0.75);
+}
+.user-image {
+  width: 100%;
+  height: 9rem;
+  object-fit: cover;
+  background-color: #eeeeee;
+  border-radius: 7px;
+}
+
+.user-name {
+  padding: 0.2rem;
+  margin-bottom: 0.2rem;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  user-select: none;
+}
+.add-friend {
+  width: 100%;
+  height: 2rem;
+  text-decoration: none;
+  text-align: center;
+  padding-top: 0.4rem;
+  border-radius: 7px;
+  color: #37474f;
+  font-weight: 800;
+  background-color: #eceff1;
+  transition: all 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  cursor: pointer;
+}
+.add-friend:hover {
+  background-color: #cfd8dc;
+}
+@media screen and (max-width: 500px) {
+  .users-content {
+    width: 100%;
+  }
+  .users-card-container {
+    width: 100%;
+  }
+  .users-card {
+    width: 100%;
+  }
+  .users-card:first-of-type {
+    margin-left: 100%;
+  }
+  .user-image {
+    width: 6.7rem;
+  }
+  .add-friend {
+    width: 6rem;
+  }
+}
