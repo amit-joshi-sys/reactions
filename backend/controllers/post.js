@@ -21,7 +21,7 @@ exports.postById = (req, res, next, id) => {
 
 exports.getPosts = async (req, res) => {
   const currentPage = req.query.page ? req.query.page : 1;
-  const perPage = 5;
+  const perPage = 15;
   const posts = await Post.find()
     .countDocuments()
     .then((count) => {
@@ -73,7 +73,7 @@ exports.createPost = (req, res) => {
 
 exports.postsByUser = async (req, res) => {
   const currentPage = req.query.page;
-  const perPage = 5;
+  const perPage = 15;
   const posts = await Post.find({ postedBy: req.profile._id })
     .countDocuments()
     .then((count) => {
