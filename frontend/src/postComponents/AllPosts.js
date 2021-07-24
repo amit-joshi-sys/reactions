@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import InfiniteScroll from "react-infinite-scroll-component";
 import { Link } from "react-router-dom";
 import { isOriginalUser } from "../helpers/user";
 import { deletePost } from "../postHelpers/post";
@@ -7,7 +6,6 @@ import CommentButton from "./CommentButton";
 import Like from "./Like";
 import "./postStyles/allPosts.css";
 import Unlike from "./Unlike";
-import Loader from "../components/Loader";
 
 const AllPosts = (props) => {
   let posts = props.posts;
@@ -39,20 +37,8 @@ const AllPosts = (props) => {
     e.target.style.display = "none";
   };
 
-  const nextPage = () => {
-    if (props.hasMore) {
-      props.fetchMore();
-    }
-  };
-
   return (
     <>
-      <InfiniteScroll
-        dataLength={posts ? posts.length : null}
-        next={nextPage}
-        hasMore={props.hasMore}
-        loader={() => <Loader />}
-      >
         <div id="post-observe" className="post-container">
           {posts && posts.length > 0 ? (
             posts.map((post) => (
@@ -126,7 +112,6 @@ const AllPosts = (props) => {
             </div>
           )}
         </div>
-      </InfiniteScroll>
     </>
   );
 };
