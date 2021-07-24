@@ -27,29 +27,23 @@ const ProfileHeader = (props) => {
   const [postUnliked, setPostUnliked] = useState(false);
   const [isPhotoUpdated, setIsPhotoUpdated] = useState(false);
   const [isTimelineUpdated, setIsTimelineUpdated] = useState(false);
-  const [page, setPage] = useState(1);
-  const [hasMore, setHasMore] = useState(false);
 
   const updatePhoto = (value) => {
     setIsPhotoUpdated(value);
   };
 
-  const fetchMore = () => {
-    setPage(page + 1);
-  };
   useEffect(() => {
     const userId = props.user.data ? props.user.data._id : null;
     if (userId) {
-      getPostsByUser(userId, page).then((data) => {
+      getPostsByUser(userId).then((data) => {
         if (data.error) {
           console.log(data.error);
         } else {
-          data.length > 0 ? setHasMore(true) : setHasMore(false);
-          setPosts([...posts, ...data]);
+          setPosts(data);
         }
       });
     }
-  }, [props.user.data, postDeleted, postLiked, postUnliked, page]);
+  }, [props.user.data, postDeleted, postLiked, postUnliked]);
 
   useEffect(() => {
     if (props.user) {
@@ -214,8 +208,6 @@ const ProfileHeader = (props) => {
             deletePost={deletePost}
             likePost={likePost}
             unlikePost={unlikePost}
-            fetchMore={fetchMore}
-            hasMore={hasMore}
           />
         ) : null}
       </div>
