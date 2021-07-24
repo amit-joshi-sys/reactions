@@ -13,8 +13,6 @@ const Home = ({ history }) => {
   const [postDeleted, setPostDelted] = useState(false);
   const [postLiked, setPostLiked] = useState(false);
   const [postUnliked, setPostUnliked] = useState(false);
-  const [page, setPage] = useState(1);
-  const [hasMore, setHasMore] = useState(false);
 
   const [post, setPost] = useState({
     body: "",
@@ -49,11 +47,6 @@ const Home = ({ history }) => {
     setPostUnliked((postUnliked) => !postUnliked);
   };
 
-  const fetchMore = () => {
-    setPage(page + 1);
-  };
-
-  console.log(posts);
 
   useEffect(() => {
     if (isAuthenticated()) {
@@ -61,12 +54,11 @@ const Home = ({ history }) => {
         if (data.error) {
           console.log(data.error);
         } else {
-          data.posts.length > 0 ? setHasMore(true) : setHasMore(false);
-          setPosts(posts.concat(data.posts));
+          setPosts(data.posts);
         }
       });
     }
-  }, [post, postDeleted, postLiked, postUnliked, page]);
+  }, [post, postDeleted, postLiked, postUnliked]);
 
   useEffect(() => {
     if (isAuthenticated()) {
@@ -90,8 +82,6 @@ const Home = ({ history }) => {
           deletePost={deletePost}
           likePost={likePost}
           unlikePost={unlikePost}
-          fetchMore={fetchMore}
-          hasMore={hasMore}
         />
       </div>
     </>
