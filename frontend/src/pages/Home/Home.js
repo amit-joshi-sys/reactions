@@ -50,7 +50,7 @@ const Home = ({ history }) => {
 
   useEffect(() => {
     if (isAuthenticated()) {
-      getPosts(page).then((data) => {
+      getPosts().then((data) => {
         if (data.error) {
           console.log(data.error);
         } else {
